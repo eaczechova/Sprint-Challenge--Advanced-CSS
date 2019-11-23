@@ -2,11 +2,18 @@
 
 .home {
 
+  h2 {
+    text-align: center;
+    padding: 2.5rem;
+    margin-top: 3rem;
+  }
+
   .intro {
     
 
     h2 {
       padding: 15px;
+    
       @media @phone {
         font-size: 2.5rem;
       }
@@ -147,4 +154,35 @@
       }
     }
   }
-}// home
+// home
+
+form {
+  .displayFlex(column, space-around, center);
+  width: 90%;
+  margin: 5rem auto;
+
+  input {
+    width: 80%;
+    max-width: 50rem;
+    margin-bottom: 10px;
+    background-color: @porcelain;
+    border: none;
+    padding: 20px 10px;
+
+    @media @phone {
+      width: 100%;
+    }
+
+  }
+
+    button {
+    .button(11rem, @btn-bg-color, @porcelain, 5px);
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 5rem auto;
+    border: 1px solid @btn-bg-color;
+    transition: background-color .5s;
+    cursor: pointer;
+  }
+
+}}
