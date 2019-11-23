@@ -33,11 +33,14 @@ p {
 .container {
   max-width: 800px;
   width: 100%;
-  margin: 0 auto;  
+  margin: 0 auto;
+
+  @media @phone {
+    .displayFlex(column, space-around, center);
+  }
 }
 
 a {
     text-decoration: none;
-    color: inherit;        
+    color: inherit;
 }
-

@@ -3,20 +3,38 @@
 .home {
 
   .intro {
+    
 
     h2 {
       padding: 15px;
+      @media @phone {
+        font-size: 2.5rem;
+      }
     }
 
     p {
       padding:0 15px;
+
+      @media @phone {
+        font-size: 1.4rem;
+      }
     }
-  
+
+    img {
+      width: 100%;
+    }
+
+    @media @phone {
+      img {
+        width: 100%;
+        height: 9rem;
+        border-radius: 5px;
+      }
+    }
   }
 
   .space-images {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
 
     img {
@@ -24,6 +42,16 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      &:not(:first-child) {
+        @media @phone {
+          display: none;
+        }
+      }
+
+      @media @phone {
+       width: 98%;
+      }
     }
   }
 
@@ -32,10 +60,17 @@
 
     h3 {
       margin-top: 11px;
+      @media @phone {
+        margin-top: 8px;
+        font-size: 2.5rem;
+      }
     }
 
     p {
       margin-top: 13px;
+      @media @phone {
+        font-size: 1.4rem;
+      }
     }
   }
 
@@ -46,8 +81,20 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      padding: 0;
+      margin-top: 2rem;
+      border-top: 1px solid @border-real;
+      .displayFlex(column-reverse, space-around, center);
+    }
+
     .walk-text {
       width: 50%;
+
+      @media @phone {
+        width: 95%;
+        margin-top: 1.5rem;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -55,15 +102,43 @@
 
       p {
         margin-bottom: 26px;
+        @media @phone {
+          font-size: 1.4rem;
+        }
       }
 
       .btn {
+        .button(11rem, @btn-bg-color, @porcelain, 5px);
+        font-size: 2rem;
+        padding: 1rem;
+        border: 1px solid @btn-bg-color;
+        transition: background-color .5s;
+        cursor: pointer;
+
+        &:hover {
+          .button(11rem, @porcelain, @btn-bg-color, 5px);
+          border: 1px solid @btn-bg-color;
+        }
+
+        @media @phone {
+          .button(95%, @btn-bg-color, @porcelain, 5px);
+          display: block;
+          .centerElement(1rem);
+          font-size: 1.7rem;
+          padding: 2rem;
+        }
+
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      @media @phone {
+        margin-left: 0;
+        margin-top: 1.3rem;
+        width: 98%;
+      }
       
       img {
         width: 100%;

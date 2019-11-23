@@ -1,1 +1,21 @@
 // Mixins Here
+
+.centerElement(@topBottom) {
+    margin: @topBottom auto;
+}
+
+.displayFlex(@direction: row, @justify-content, @align-items) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify-content;
+    align-items: @align-items;
+}
+
+
+.button(@width, @bg-color, @color, @border-radius) {
+    width: @width;
+    background-color: @bg-color;
+    color: @color;
+    border-radius: @border-radius;
+    text-align: center;
+}
