@@ -10,6 +10,12 @@ html {
 html, body {
   font-family: 'Ubuntu', sans-serif;
   color: @main-font-color;
+  height: 100%;
+  padding-top: 4.8rem;
+
+  @media @phone {
+    padding-top: 3.6rem;
+  }
 }
 
 h1, h2, h3, h4, h5 {
@@ -33,6 +39,25 @@ p {
 .container {
   max-width: 800px;
   width: 100%;
-  margin: 0 auto;  
+  min-height: 90%;
+  margin: 0 auto;
+
+  @media @phone {
+    .displayFlex(column, space-around, center);
+  }
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 29ch;
+  }
+}

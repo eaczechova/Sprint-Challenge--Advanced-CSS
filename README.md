@@ -34,13 +34,25 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+Fully responsive website let user seamlessly go between different screen sizes by using relative units (%, ems, rems etc.) and media queries. Adaptive website will have different fixed layout for different screens as it uses media queries, but with absolute unit.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+A mobile-first approach creates styles that are applied first to mobile devices and then are overridden for larger screens using ```min-width`` media queries. 
+A desktop-first approach creates styles that are in first place applied first to desktop views and then are overridden for smaller screens using ```max-width``` media queries. 
+Code for larger screens is usually more complicated and have more advanced styles than the codes for smaller screens therefore we should think about mobile-first or desktop-first approach at the very beginning. 
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+Rem is a length unit relative to root element (```html``` tag) and equals to a browser default ```font-size``` that is usually 16px, but for easier rem calculation reset by developers to 10px. However, using a hard coded pixel values on the ```html``` tag is bad practice as it overwrites the user’s default settings on their browser it has been replaced by % value of 62.5% (10px/16px so the proportion is 0.625 that is 62.5% ). 
+
 4. How would you describe preprocessing to someone new to CSS?
 
+ Preprocessing is taking one type of data and converting it to another type of data, in the case of CSS preprocessor it generates CSS code out of its own syntax that let you write code with extra features and is easier to maintain and keep it DRY. 
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+My favorite concept in preprocessing is the possibility to change code just in one place instaed of many; so my favorite concept are variables and reusability of the code that comes with mixins. The most challenging so far was the nesting in terms of code organization. 
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
