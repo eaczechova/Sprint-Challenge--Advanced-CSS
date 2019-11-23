@@ -1,1 +1,29 @@
 // Navigation code here
+
+nav {
+    background: @nav-bg;
+    border-bottom: 2px solid @nav-border;
+
+    h1 {
+        font-size: 4.5rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin: 1rem auto;
+        display: flex;
+        width: 40%;
+        justify-content: space-around;
+        align-items: center;
+
+        a {
+            font-size: 1.7rem;
+            padding: 1rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
